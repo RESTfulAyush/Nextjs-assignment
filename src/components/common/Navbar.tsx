@@ -16,8 +16,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-[#0D0E1B] z-50">
-      <div className="flex items-center justify-between px-6 py-4  mx-auto">
+    <nav className="fixed w-full bg-[#0D0E1B] z-60 px-9">
+      <div className="flex items-center justify-between mx-auto">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -31,7 +31,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex flex-1 justify-end gap-28 text-gray-200">
+        <ul className="hidden md:flex flex-1 justify-end gap-28 text-[#FFFBFB]">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
@@ -44,7 +44,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Hamburger */}
         <button
           className="md:hidden text-gray-200"
           onClick={() => setIsOpen(!isOpen)}
@@ -53,7 +52,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden flex flex-col gap-4 bg-[#0D0E1B] px-6 py-4 text-gray-200">
           {navItems.map((item) => (
