@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Kite_One } from "next/font/google";
 import { Instrument_Sans } from "next/font/google";
+import React from "react";
 
 const kiteOne = Kite_One({
   weight: "400",
@@ -49,25 +50,37 @@ const NetworkSection = () => (
     </div>
 
     {/* ✅ Bottom Section - Featured Logos */}
-    <div className="relative w-full text-center">
+    <div className="relative w-full text-center py-12">
       {/* Section Label */}
-      <p className={`${instrumentSans.className} text-white text-[24px]`}>
+      {/* <p className="text-white text-[24px] mb-8 tracking-wide">
         AS FEATURED IN ...
-      </p>
+      </p> */}
+      <div className={`${instrumentSans.className}`}>
+        <p className="text-white text-[24px] mb-8 tracking-wide">
+          AS FEATURED IN ...
+        </p>
+      </div>
 
-      {/* Brand List */}
-      <div className="flex flex-wrap justify-around items-center gap-6 sm:gap-12 text-white my-8 mx-8">
-        {logos.map((logo, idx) => (
-          <div key={logo.alt} className="flex items-center">
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={80}
-              height={0}
-              className="object-contain"
-            />
-            <span>|</span>
-          </div>
+      {/* Logos with separators */}
+      <div className="w-full grid grid-cols-[repeat(7,auto)] justify-between items-center px-[8vw]">
+        {logos.map((logo, i, arr) => (
+          <React.Fragment key={logo.alt}>
+            {/* Logo */}
+            <div className="flex justify-center">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={100}
+                height={40}
+                className="object-contain"
+              />
+            </div>
+
+            {/* Gradient separator (except after last logo) */}
+            {i < arr.length - 1 && (
+              <div className="h-[100px] w-[1px] bg-gradient-to-b from-[#FF0505] to-[#FFFEFE] opacity-70 mx-auto" />
+            )}
+          </React.Fragment>
         ))}
       </div>
     </div>

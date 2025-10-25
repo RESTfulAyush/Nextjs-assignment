@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="mt-6 flex flex-wrap gap-4 justify-center items-center">
           <Link href="/">
             <Image
-              src="/bg-img/homepage/AppStore.png"
+              src="/bg-img/homepage/icons/AppStore.png"
               alt="Download on App Store"
               width={156}
               height={100}
@@ -41,7 +41,7 @@ const HeroSection = () => {
 
           <Link href="/">
             <Image
-              src="/bg-img/homepage/PlayStore.png"
+              src="/bg-img/homepage/icons/PlayStore.png"
               alt="Get it on Google Play"
               width={156}
               height={100}
