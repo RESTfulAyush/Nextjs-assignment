@@ -15,7 +15,7 @@ export default function HomePage() {
       <ChargingSteps />
       <ChargingSpeed />
       <RoutePlanner />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </>
   );
 }
