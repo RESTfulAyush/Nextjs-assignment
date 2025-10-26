@@ -1,6 +1,11 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Instrument_Sans } from "next/font/google";
+const InstrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Footer() {
   return (
@@ -16,7 +21,9 @@ export default function Footer() {
               height={60}
               className="mb-4"
             />
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p
+              className={`${InstrumentSans.className}  text-[#FFFFFF] leading-relaxed`}
+            >
               Leading the charge in sustainable transportation with innovative
               EV charging solutions.
             </p>
@@ -49,8 +56,8 @@ export default function Footer() {
           </div>
 
           {/* Services Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+          <div className={`${InstrumentSans.className}`}>
+            <h3 className="text-lg font-bold mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -89,7 +96,7 @@ export default function Footer() {
 
           {/* Company Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
+            <h3 className="text-lg font-bold mb-6">Company</h3>
             <ul className="space-y-3">
               <li>
                 <Link
