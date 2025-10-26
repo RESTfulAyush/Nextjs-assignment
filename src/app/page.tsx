@@ -4,7 +4,6 @@ import StatsSection from "@/components/home/StatsSection";
 import ChargingSteps from "@/components/home/ChargingSteps";
 import ChargingSpeed from "@/components/home/ChargingSpeed";
 import RoutePlanner from "@/components/home/RoutePlanner";
-import Newsletter from "@/components/home/Newsletter";
 
 export default function HomePage() {
   return (
@@ -15,7 +14,6 @@ export default function HomePage() {
       <ChargingSteps />
       <ChargingSpeed />
       <RoutePlanner />
-      {/* <Newsletter /> */}
     </>
   );
 }
